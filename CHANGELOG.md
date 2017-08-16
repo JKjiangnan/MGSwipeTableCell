@@ -1,5 +1,42 @@
 # Changelog
 
+## 1.6.0
+
+- Fix glitch when dragging before animation completes.
+- Fix cell separator overlap when swiping.
+- Add buttonsDistance property to MGSwipeSettings: allows to control distance between the buttons.
+- Add MGSwipeExpansionLayoutNone type that allows not to performont button layout in expansions.
+- Improved AppExtension and RTL language support.
+- Improved Swift interoperation.
+
+## 1.5.6
+
+- Improve iOS 10.0 support
+- Objective-C nullable annotations to improve Swift 3.0 interoperation. Add Swift 3.0 sample.
+- Improve accesibility implementation to allow recording UI Tests
+- Add preprocessor macro to allow compilations on App Extension projects
+- Add swipeBounceRate property. Coefficient applied to cell movement in bounce zone
+- Fix issue #216: Crash when combining programmatically created offset animations in consecutive block callbacks
+- Fix issue #139: Accessing Buttons in UITests does not work
+- Fix issue #134: Crash due to zombie object in expansion
+- Fix button text alignment for RTL languages
+
+## 1.5.5
+
+- Fix iOS 8.0 compatibility issue
+- Fix issue #190: duplicate callback
+
+## 1.5.4
+
+- Safer animation and callbacks checks after a cell is deleted. Fixes issue #91 caused by a null cell.indexPath because the callback was called while/after a cell is deleted
+- Fix issue #168: problem with devices that read right to left (Arabic and Hebrew)
+- Fix swipe issues after reloading a table
+- Fix issue #163: Swipe not working after deleting a cell
+- Add enableSwipeBounces property. Enabled by default, if disabled the swipe bounces will be disabled and the swipe motion will stop right after the button.
+- Add allowsOppositeSwipe property. Controls whether swipe gesture is allowed in opposite directions. NO value disables swiping in opposite direction once started in one direction
+- Add topMargin and bottomMargin properties to MGSwipeSettings
+- Add touchOnDismissSwipe property. Controls whether dismissing a swiped cell when clicking outside of the cell generates a real touch event on the other cell. Default behaviour is the same as the Mail app on iOS. Enable it if you want to allow to start a new swipe while a cell is already in swiped.
+- Add a 'BOOL finished' parameter to completion animation callbacks
 
 ## 1.5.3
 
